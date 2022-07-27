@@ -31,7 +31,7 @@ class Partner extends Equatable implements OdooRecord {
     return Partner(
       id: json["id"],
       name: json["name"],
-      email: json["email"],
+      email: json["email"] != false ? json["email"] : "",
       imageSmall: json["image_small"] as String? ?? "",
     );
   }
